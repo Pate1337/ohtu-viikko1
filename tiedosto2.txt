@@ -1,2 +1,0 @@
-Tänne kanssa vähän muutoksia
-Nämä muutokset lisätään git add -p :llä
