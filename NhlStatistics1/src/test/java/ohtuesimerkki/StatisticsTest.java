@@ -55,7 +55,26 @@ public class StatisticsTest {
     
     @Test
     public void palauttaaJoukkueenPelaajat() {
-        
+        List<Player> lista = stats.team("PIT");
+        assertEquals("Lemieux", lista.get(0).getName());
+    }
+    
+    @Test
+    public void hakuToimiiOikeallaSyötteellä() {
+        Player pelaaja = stats.search("Kurri");
+        assertEquals("Kurri", pelaaja.getName());
+    }
+    
+    @Test
+    public void hakuToimiiVäärälläSyötteellä() {
+        Player pelaaja = stats.search("Koira");
+        assertEquals(null, pelaaja);
+    }
+    
+    @Test
+    public void palauttaaParhaatPisteidentekijät() {
+        List<Player> lista = stats.topScorers(1);
+        assertEquals("Gretzky", lista.get(0).getName());
     }
     
 //    @After
