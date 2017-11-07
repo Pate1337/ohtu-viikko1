@@ -19,8 +19,8 @@ public class LaskinTest {
 
 class IOStub implements IO {
 
-    int[] inputs;
-    int mones;
+    private int[] inputs;
+    private int mones;
     ArrayList<String> outputs;
 
     public IOStub(int... inputs) {
